@@ -12,12 +12,12 @@ public class TestingMain {
         System.out.println("Dodawanie: "+ dodawanie);
         System.out.println("Odejmowanie: "+ odejmowaie);
 
-        if (dodawanie>(dodawanie-10)) {
+        if (dodawanie==80) {
             System.out.println("test OK");
         }else {
             System.out.println("Error!");
         }
-        if (odejmowaie>(odejmowaie)) {
+        if (odejmowaie==210) {
             System.out.println("test OK");
         }else {
             System.out.println("Error!");
