@@ -3,24 +3,24 @@ import com.kodilla.testing.calculator.Calkulator;
 
 public class TestingMain {
     public static void main (String[] args) {
+
         Calkulator kalkulator = new Calkulator();
 
-        kalkulator.dodaj();
-        kalkulator.odejmij();
-        int dodawanie =kalkulator.getWynik();
-        int odejmowaie = kalkulator.getWynik2();
-        System.out.println("Dodawanie: "+ dodawanie);
-        System.out.println("Odejmowanie: "+ odejmowaie);
+       System.out.println("Dodawanie: "+kalkulator.dodaj(100,55));
+       System.out.println("Odejmowanie: "+ kalkulator.odejmij(100, 55));
 
-        if (dodawanie==80) {
-            System.out.println("test OK");
-        }else {
-            System.out.println("Error!");
+        if(kalkulator.dodaj(100,55)==155) {
+            System.out.println("Test OK!");
+        }else{
+            System.out.println("Test nie powiodl sie!");
         }
-        if (odejmowaie==210) {
-            System.out.println("test OK");
-        }else {
-            System.out.println("Error!");
+        if(kalkulator.odejmij(100,55)==45) {
+            System.out.println("Test OK!");
+        }else{
+            System.out.println("Test nie powiodl sie!");
         }
     }
+
+
+
 }
