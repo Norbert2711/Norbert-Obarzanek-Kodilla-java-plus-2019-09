@@ -11,7 +11,7 @@ double field;
         this.name = name;
         this.field=field;
     }
-Circle circl = new Circle("Circle", field);
+Circle circle = new Circle("Circle", field);
 
     @Override
     public String getShapeName() {
@@ -23,5 +23,6 @@ Circle circl = new Circle("Circle", field);
     field= pi*(r*r);
         return "Circle's field: "+field;
     }
+
 }
 

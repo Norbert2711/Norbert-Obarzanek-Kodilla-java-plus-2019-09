@@ -1,6 +1,7 @@
 package com.kodilla.testing.shape;
 // klasa trojkat
  class Triangle implements Shape {
+
     int a = 5;
     int h = 8;
     String name;

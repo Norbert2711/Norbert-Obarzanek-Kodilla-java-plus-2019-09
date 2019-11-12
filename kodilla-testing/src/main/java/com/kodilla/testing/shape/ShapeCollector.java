@@ -23,6 +23,7 @@ public void getFigure(int n){
     System.out.println(figures.get(n));
 }
   public void showFigures(Square square, Circle circle, Triangle triangle){
+
       System.out.println(square);
       System.out.println(circle);
       System.out.println(triangle);
