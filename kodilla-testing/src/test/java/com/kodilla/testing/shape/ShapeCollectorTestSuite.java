@@ -2,8 +2,6 @@ package com.kodilla.testing.shape;
 
 import org.junit.*;
 
-import java.util.ArrayList;
-
 public class ShapeCollectorTestSuite {
 
     private static int testCounter = 0;
@@ -26,37 +24,33 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void testAddFigure() {  //Test nr 1.
-        Circle circle = new Circle("Circle", 50.26);
-        ArrayList<Shape> figures = new ArrayList<Shape>();
-        figures.add(circle);
-        Assert.assertTrue(figures.isEmpty());
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Circle circle = new Circle("Circle", 56.56);
+        shapeCollector.addFigure(circle);
+        int result= shapeCollector.getSize();
+        Assert.assertEquals(1,result);
     }
 
     @Test
     public void testRemoveFigure() {  //Test nr 2.
+        ShapeCollector shapeCollector= new ShapeCollector();
         Circle circle = new Circle("Circle", 50.26);
-        ArrayList<Shape> figures = new ArrayList<Shape>();
-        figures.add(circle);
-        figures.remove(0);
-        Assert.assertTrue(figures.isEmpty());
+        Circle square = new Circle("Square", 56);
+        shapeCollector.addFigure(circle);
+        shapeCollector.addFigure(square);
+        shapeCollector.removeFigure(circle);
+        int result = shapeCollector.getSize();
+        Assert.assertEquals(1, result);
     }
 
     @Test
-    public void testGetFigure() {
+    public void testGetFigure() {       //Test nr 3
+        ShapeCollector shapeCollector = new ShapeCollector();
         Circle circle = new Circle("Circle", 50.26);
-        ArrayList<Shape> figures = new ArrayList<Shape>();
-        figures.add(circle);
-        figures.get(0);
-        Shape result = (figures.get(0));
-    }
-
-    @Test
-    public void testShowFigures(){
-        Circle circle = new Circle("Circle", 50.26);
-        Square square = new Square("Square",25);
-        Triangle triangle =new Triangle("Triangle",20);
-        System.out.println(circle);
-        System.out.println(square);
-        System.out.println(triangle);
+        Circle triangle = new Circle("Triangle", 50);
+        shapeCollector.addFigure(circle);
+        shapeCollector.addFigure(triangle);
+        Shape result = shapeCollector.getFigure(0);
+        Assert.assertEquals(circle, result);
     }
 }

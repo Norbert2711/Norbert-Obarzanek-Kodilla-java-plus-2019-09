@@ -1,25 +1,37 @@
 package com.kodilla.testing.shape;
 //klasa kwadrat
 
-class Square implements Shape {
-    int a =5;
-    String name;
-    int field;
+import java.util.Objects;
 
-    public Square(String name, int field) {
+class Square implements Shape {
+    String name;
+    double field;
+    int a= 5;
+    public Square(String name, double field) {
         this.name = name;
         this.field=field;
+        this.a=a;
     }
-Square square = new Square("Square",field);
-
     @Override
     public String getShapeName() {  //zwroc nazwe figury
-        return "I'm a Square. Jestem Kwadratem. "+name;
-
+        return name;
     }
     @Override
-    public String getField() {
-    field = a*a; //licz pole kwadratu
-        return "Square's field = "+field;
+    public double getField() {
+        field= a*a;
+        return field;
+    }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Square square = (Square) o;
+        return Double.compare(square.field, field) == 0 &&
+                a == square.a &&
+                Objects.equals(name, square.name);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, field, a);
     }
 }

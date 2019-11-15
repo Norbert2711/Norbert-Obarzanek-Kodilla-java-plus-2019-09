@@ -3,31 +3,34 @@ package com.kodilla.testing.shape;
 import java.util.ArrayList;
 
 public class ShapeCollector {
+    private ArrayList<Shape> figures = new ArrayList<Shape>();
 
-
-    public void addFigure(Shape shape){
-        ArrayList<Shape> figures = new ArrayList<Shape>();
+    // dodanie figury
+    public void addFigure(Shape shape) {
         figures.add(shape);
     }
 
-    public void removeFigure(Shape shape){
-        ArrayList<Shape> figures = new ArrayList<Shape>();
-        figures.remove(figures.size()-1);
-        System.out.println(figures);
+    public int getSize() {
+        return figures.size();
     }
 
-public void getFigure(int n){
-    ArrayList<Shape> figures = new ArrayList<Shape>();
-    for (n=0; n<3; n++){
+    //usuniecie figury
+    public void removeFigure(Shape shape) {
+        figures.remove(shape);
     }
-    System.out.println(figures.get(n));
-}
-  public void showFigures(Square square, Circle circle, Triangle triangle){
 
-      System.out.println(square);
-      System.out.println(circle);
-      System.out.println(triangle);
+    //pobranie indexu figury
+    public Shape getFigure(int n) {
+        if (n >= 0 && n < figures.size()) {
+            return figures.get(n);
+        }
+        return null;
+    }
 
-
+    //pokaz figury
+    public void showFigures() {
+        for (Shape show : figures) {
+            System.out.println(show);
+        }
     }
 }
