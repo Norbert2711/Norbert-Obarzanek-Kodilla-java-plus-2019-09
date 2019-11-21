@@ -23,34 +23,36 @@ public class ShapeCollectorTestSuite {
     }
 
     @Test
-    public void testAddFigure() {  //Test nr 1.
+    public void testAddFigure() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        Circle circle = new Circle("Circle", 56.56);
+        Circle circle = new Circle("Circle", 55);
         shapeCollector.addFigure(circle);
-        int result= shapeCollector.getSize();
-        Assert.assertEquals(1,result);
-    }
-
-    @Test
-    public void testRemoveFigure() {  //Test nr 2.
-        ShapeCollector shapeCollector= new ShapeCollector();
-        Circle circle = new Circle("Circle", 50.26);
-        Circle square = new Circle("Square", 56);
-        shapeCollector.addFigure(circle);
-        shapeCollector.addFigure(square);
-        shapeCollector.removeFigure(circle);
         int result = shapeCollector.getSize();
         Assert.assertEquals(1, result);
     }
 
     @Test
-    public void testGetFigure() {       //Test nr 3
+    public void testRemoveFigures() {
         ShapeCollector shapeCollector = new ShapeCollector();
-        Circle circle = new Circle("Circle", 50.26);
-        Circle triangle = new Circle("Triangle", 50);
+        Circle circle = new Circle("Circle", 34);
+        Square square = new Square("Square, ", 45);
+        shapeCollector.addFigure(square);
         shapeCollector.addFigure(circle);
-        shapeCollector.addFigure(triangle);
+        shapeCollector.removeFigure(circle);
+        int result = shapeCollector.getSize();
+        Assert.assertEquals(1, result);
+
+    }
+
+    @Test
+    public void getFigure() {
+        ShapeCollector shapeCollector = new ShapeCollector();
+        Circle circle = new Circle("Circle", 34);
+        Square square = new Square("Square, ", 45);
+        shapeCollector.addFigure(circle);
+        shapeCollector.addFigure(square);
         Shape result = shapeCollector.getFigure(0);
         Assert.assertEquals(circle, result);
     }
+
 }

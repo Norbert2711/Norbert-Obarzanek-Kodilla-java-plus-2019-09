@@ -3,6 +3,7 @@ package com.kodilla.testing.forum;
 import java.util.Objects;
 
 public class ForumComment {
+
     ForumPost forumPost;
     String commentBody;
     String author;
@@ -35,6 +36,9 @@ public class ForumComment {
     }
     @Override
     public int hashCode() {
-        return Objects.hash(forumPost, commentBody, author);
+        int result = forumPost.hashCode();
+        result = 31 * result + commentBody.hashCode();
+        result = 31 * result + author.hashCode();
+        return result;
     }
 }
