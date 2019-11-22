@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.statistics.TestNewForumStatistics" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-11-21T23:35:22" hostname="LAPTOP-B9UVV4I7" time="0.352">
+<testsuite name="com.kodilla.testing.statistics.TestNewForumStatistics" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-11-22T09:14:07" hostname="LAPTOP-B9UVV4I7" time="0.307">
   <properties/>
-  <testcase name="testCalculateAdvWhenPostEquals1000" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.345"/>
+  <testcase name="testCalculateAdvWhenPostEquals1000" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.302"/>
   <testcase name="testCalculateAdvWhenUsersAre0AndPostsAre1000" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.0"/>
   <testcase name="testCalculateAdvWhenCommentAreLessThanPosts" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.001"/>
-  <testcase name="testCalculateAdvWhenPostsAreLessThanComments" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.0"/>
-  <testcase name="testCalculateAdvWhenUsersAre100" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.001"/>
-  <testcase name="testCalculateAdvWhenPostEqualsZeroCommentsEqualsZeroAndUsersEqualsZero" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.0"/>
-  <testcase name="testCalculateAdvWhenUsersAre100AndPostsAre1000" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.002"/>
+  <testcase name="testCalculateAdvWhenPostsAreLessThanComments" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.001"/>
+  <testcase name="testCalculateAdvWhenUsersAre100" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.0"/>
+  <testcase name="testCalculateAdvWhenPostEqualsZeroCommentsEqualsZeroAndUsersEqualsZero" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.001"/>
+  <testcase name="testCalculateAdvWhenUsersAre100AndPostsAre1000" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.0"/>
   <system-out><![CDATA[This is the beginning of tests. Poczatek!
 Preparing to execute test. Numer TESTU:  #1
 Preparing to execute test. Numer TESTU:  #2
