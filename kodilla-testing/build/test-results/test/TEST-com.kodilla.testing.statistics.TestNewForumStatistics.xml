@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.statistics.TestNewForumStatistics" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-23T13:31:20" hostname="LAPTOP-B9UVV4I7" time="0.31">
+<testsuite name="com.kodilla.testing.statistics.TestNewForumStatistics" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-11-24T10:49:58" hostname="LAPTOP-B9UVV4I7" time="0.304">
   <properties/>
-  <testcase name="testCalculateAdvWhenUsers0Posts1000AndCommentsAreLessThanPosts" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.31"/>
+  <testcase name="testCalculateAdvWhenUsers0Posts1000AndCommentsAreLessThanPosts" classname="com.kodilla.testing.statistics.TestNewForumStatistics" time="0.304"/>
   <system-out><![CDATA[This is the beginning of tests. Poczatek!
 Preparing to execute test. Numer TESTU:  #1
 All tests are finished. Testy ZAKONCZONE

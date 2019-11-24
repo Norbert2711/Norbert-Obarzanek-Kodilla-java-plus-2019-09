@@ -258,7 +258,7 @@ public class TestNewForumStatistics {
         newForumStatistisc.calculateAdvStatistics(statisticsMock);
         //Then
         Assert.assertEquals(0, newForumStatistisc.getAverageCommentsPerUser());
-        Assert.assertEquals(0, newForumStatistisc.getAverageCommentPerPost());
+        Assert.assertEquals(0, newForumStatistisc.getAverageCommentPerPost(),0.03);
         Assert.assertEquals(0, newForumStatistisc.getAveragePostPerUser());
     }
 }
