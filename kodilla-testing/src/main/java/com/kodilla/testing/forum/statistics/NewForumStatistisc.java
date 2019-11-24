@@ -7,11 +7,11 @@ import java.util.Objects;
 public class NewForumStatistisc {
 
     private List<String> userNames = new ArrayList<String>();
-    private int postsCount;
-    private int commentsCount;
-    private int averagePostPerUser;
-    private int averageCommentsPerUser;
-    private int averageCommentPerPost;
+    private double postsCount;
+    private double commentsCount;
+    private double averagePostPerUser;
+    private double averageCommentsPerUser;
+    private double averageCommentPerPost;
 
     public List<String> getUserNames() {
         return userNames;
@@ -21,23 +21,23 @@ public class NewForumStatistisc {
         return userNames.size();
     }
 
-    public int getPostsCount() {
+    public double getPostsCount() {
         return postsCount;
     }
 
-    public int getCommentsCount() {
+    public double getCommentsCount() {
         return commentsCount;
     }
 
-    public int getAveragePostPerUser() {
+    public double getAveragePostPerUser() {
         return averagePostPerUser;
     }
 
-    public int getAverageCommentsPerUser() {
+    public double getAverageCommentsPerUser() {
         return averageCommentsPerUser;
     }
 
-    public int getAverageCommentPerPost() {
+    public double getAverageCommentPerPost() {
         return averageCommentPerPost;
     }
 
