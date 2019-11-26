@@ -12,9 +12,21 @@ public class BookLibrary {
 
     public List<Book> listBooksWithCondition(String titleFragment) {
         List<Book> bookList = new ArrayList<Book>();
-        Book book = new Book("The book title", "The book author", 2000);
-        bookList.add(book);
-
+        if (titleFragment.length() < 3) return bookList;
+        List<Book> resultList = libraryDatabase.listBooksWithCondition(titleFragment);
+        if (resultList.size() > 20) return bookList;
+        bookList = resultList;
         return bookList;
     }
+
+    public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
+        List<Book> booksInHands = new ArrayList<Book>();
+        if (booksInHands.size() == 0) return booksInHands;
+        List<Book> booksBorrowed = libraryDatabase.listBooksInHandsOf(libraryUser);
+        if (booksBorrowed.size() == 1) return booksInHands;
+        if (booksBorrowed.size() == 5) return booksInHands;
+        booksInHands = booksBorrowed;
+        return booksInHands;
+    }
+
 }
