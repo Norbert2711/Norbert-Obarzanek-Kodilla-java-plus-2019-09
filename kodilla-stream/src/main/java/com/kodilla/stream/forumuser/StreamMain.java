@@ -12,7 +12,6 @@ public class StreamMain {
         LocalDate actualDate = LocalDate.now();
         LocalDate dateMinus20 = actualDate.minus(20, ChronoUnit.YEARS); // po odjeciu 20 ---> data 1999-12-02
 
-
         Map<Integer, ForumUser> userList = forumUser.getUserList().stream()
                 .filter(user -> user.getSex() == 'M')
                 .filter(user -> user.getPostsNumbers() != 0)

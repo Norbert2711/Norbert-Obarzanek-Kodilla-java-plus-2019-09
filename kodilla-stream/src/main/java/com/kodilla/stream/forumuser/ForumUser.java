@@ -4,13 +4,11 @@ import java.time.LocalDate;
 import java.util.Objects;
 public class ForumUser {
 
-
     int userID;
     String userName;
     char sex = 'M' / 'F';
     LocalDate dayOfBirth;
     int postsNumbers;
-
 
     public ForumUser(int userID, String userName, char sex, int year, int month, int day, int postsNumbers) {
         this.userID = userID;
