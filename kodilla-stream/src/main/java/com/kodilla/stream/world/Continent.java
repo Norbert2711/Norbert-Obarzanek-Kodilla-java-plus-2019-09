@@ -1,20 +1,26 @@
 package com.kodilla.stream.world;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Continent {
 
-    public void countriesList() {
-        List<Country> countries = new ArrayList<>();
+    private List<Country> countries = new ArrayList<>();        //lista krajow
+    private final String name;
 
-Country Poland = new Country();
-        World Europe = new World();
+    public Continent(List<Country> countries, String name) {
+        this.name = name;
+    }
 
+    public void Countries(List<Country> countries) {
+        this.countries = countries;
+    }
 
-//        countries.add("Poland");
-//        countries.add("Bangladesh");
-//        countries.add("Algeria");
-//        countries.add("Canberra");
-//        countries.add("New York");
+    List<Country> getCountries() {
+        return countries;
+    }
+
+    public void addCountry(Country country) {           //dodanie kraju
+        countries.add(country);
     }
 }

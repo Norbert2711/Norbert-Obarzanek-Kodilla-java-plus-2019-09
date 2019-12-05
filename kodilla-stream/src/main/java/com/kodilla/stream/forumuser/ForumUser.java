@@ -6,7 +6,7 @@ public class ForumUser {
 
     int userID;
     String userName;
-    char sex = 'M' / 'F';
+    char sex;
     LocalDate dayOfBirth;
     int postsNumbers;
 
