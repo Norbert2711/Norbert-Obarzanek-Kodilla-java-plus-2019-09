@@ -12,6 +12,10 @@ public class Continent {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public void Countries(List<Country> countries) {
         this.countries = countries;
     }
@@ -19,8 +23,7 @@ public class Continent {
     List<Country> getCountries() {
         return countries;
     }
-
-    public void addCountry(Country country) {           //dodanie kraju
+    public void addCountry(Country country) {
         countries.add(country);
     }
 }
