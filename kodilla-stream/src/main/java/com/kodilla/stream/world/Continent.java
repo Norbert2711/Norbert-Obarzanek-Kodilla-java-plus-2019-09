@@ -5,25 +5,25 @@ import java.util.List;
 
 public class Continent {
 
-    private List<Country> countries = new ArrayList<>();        //lista krajow
-    private final String name;
+    private List<Country> listWithCountries = new ArrayList<>();        //lista krajow
+    private final String continentName;
 
-    public Continent(List<Country> countries, String name) {
-        this.name = name;
+    public Continent(String name) {
+        this.continentName = name;
     }
 
-    public String getName() {
-        return name;
+    public String getContinentName() {
+        return continentName;
     }
 
     public void Countries(List<Country> countries) {
-        this.countries = countries;
+        this.listWithCountries = countries;
     }
 
-    List<Country> getCountries() {
-        return countries;
+    List<Country> getListWithCountries(){
+        return listWithCountries;
     }
     public void addCountry(Country country) {
-        countries.add(country);
+        listWithCountries.add(country);
     }
 }
