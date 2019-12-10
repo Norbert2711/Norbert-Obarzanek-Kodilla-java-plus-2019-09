@@ -16,38 +16,13 @@ public class ArrayOperationsTestSuite {
     @Test
     public void testGetAverage() {
         //Given
-        int[] numbers = new int[20];
-        numbers[0] = 6;
-        numbers[1] = 3;
-        numbers[2] = 6;
-        numbers[3] = 2;
-        numbers[4] = 2;
-        numbers[5] = 6;
-        numbers[6] = 8;
-        numbers[7] = 2;
-        numbers[8] = 1;
-        numbers[9] = 3;
-        numbers[10] = 2;
-        numbers[11] = 4;
-        numbers[12] = 2;
-        numbers[13] = 6;
-        numbers[14] = 2;
-        numbers[15] = 9;
-        numbers[16] = 7;
-        numbers[17] = 4;
-        numbers[18] = 9;
-        numbers[19] = 9;
-        //93
+        int numbers [] = {21,3,5,6,0,7,6,4,8,1,3,7,14,6,8,5,3,8,5,10};  //sum 130
+        double resultAverage = 6.5;
 
         //When
-      ArrayOperations.getAverage(numbers);
+        double average = ArrayOperations.getAverage(numbers);
 
-int[] result= new int[0];
-result[0]= 4;
-
-        //Then
-       // Assert.assertArrayEquals(4.65,numbers,0.65);
-        Assert.assertArrayEquals(result,numbers);
+        Assert.assertEquals(resultAverage, average, 0.0001);
 
     }
 }
