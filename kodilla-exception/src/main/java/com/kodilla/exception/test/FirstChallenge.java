@@ -2,9 +2,6 @@ package com.kodilla.exception.test;
 
 public class FirstChallenge {
 
-    ClassLoader classLoader = getClass().getClassLoader();
-
-
     public double divide(double a, double b) throws ArithmeticException {
 
         try {
@@ -12,14 +9,18 @@ public class FirstChallenge {
                 throw new ArithmeticException();
             }
 
-        }catch (ArithmeticException e) {
-            System.out.println("You cant't divide by 0");
+        } catch (ArithmeticException e) {
+            System.out.println("You cant't divide by 0! " + e);
 
+        } finally {
+            System.out.println("The error has been handled!");
         }
         return a / b;
     }
+
     /**
      * This main can throw an ArithmeticException!!!
+     *
      * @param args
      */
     public static void main(String[] args) {
@@ -30,4 +31,4 @@ public class FirstChallenge {
 
         System.out.println(result);
     }
-    }
+}
