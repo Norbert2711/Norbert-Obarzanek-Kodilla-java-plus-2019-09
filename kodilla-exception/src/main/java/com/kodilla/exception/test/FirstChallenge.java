@@ -10,6 +10,7 @@ public class FirstChallenge {
             }
 
         } catch (ArithmeticException e) {
+
             System.out.println("You cant't divide by 0! " + e);
 
         } finally {
