@@ -10,7 +10,7 @@ public class ExceptionHandling {
         SecondChallenge secondChallenge = new SecondChallenge();
         String result ="RESULT:";
         try {
-             result = secondChallenge.probablyIWillThrowException(2.1, 1.5);
+             result = secondChallenge.probablyIWillThrowException(1.8, 1.5);
 
         } catch (Exception e) {
             System.out.println("We have problem! " + e);
