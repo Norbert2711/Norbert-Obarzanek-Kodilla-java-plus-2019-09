@@ -12,6 +12,5 @@ public class ExceptionModuleRunner {
         } catch (FileReaderException e) {
             System.out.println("Problem while reading a file ");
         }
-
     }
 }
