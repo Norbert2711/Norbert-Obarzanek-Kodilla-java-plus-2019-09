@@ -9,7 +9,7 @@ public class RunFlightSerachEngine {
         Flight russiaBrazil = new Flight("RUSSIA", "BRAZIL");   // F / F
         Flight germanyEngland = new Flight("GERMANY", "ENGLAND");   // T / T
 
-        flightSearchEngine flightSearcher = new flightSearchEngine();   //obiekt klasy flight...
+        FlightSearchEngine flightSearcher = new FlightSearchEngine();   //obiekt klasy flight...
 
         try {
             boolean connectionPolGer = flightSearcher.findFlight(polandGermany);

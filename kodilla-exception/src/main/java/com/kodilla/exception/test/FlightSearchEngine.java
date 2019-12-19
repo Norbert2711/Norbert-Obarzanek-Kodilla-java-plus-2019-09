@@ -3,11 +3,11 @@ package com.kodilla.exception.test;
 import java.util.HashMap;
 import java.util.Map;
 
-public class flightSearchEngine {
+public class FlightSearchEngine {
 
     private final Map<String, Boolean> airportMap;
 
-    public flightSearchEngine() {           //konstruktor
+    public FlightSearchEngine() {           //konstruktor
         airportMap=allAirportsBase();
     }
 
