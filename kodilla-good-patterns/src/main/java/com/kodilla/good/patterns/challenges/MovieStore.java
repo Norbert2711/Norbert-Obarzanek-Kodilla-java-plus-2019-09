@@ -7,6 +7,8 @@ import java.util.Map;
 
 class MovieStore {
 
+    public MovieStore() {
+    }
 
     public Map<String, List<String>> getMovies() {
 
