@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Payment {
 
-    String card;
-    String paymentDescription;
+    private String card;
+    private String paymentDescription;
 
     public Payment(String card, String paymentDescription) {
 

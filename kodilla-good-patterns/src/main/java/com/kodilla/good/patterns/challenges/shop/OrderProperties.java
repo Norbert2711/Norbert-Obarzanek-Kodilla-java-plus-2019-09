@@ -4,12 +4,12 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class OrderProperties {
-    User user;
-    Product product;
-    int quantity;
-    LocalDate dateOfDelivery;
-    Payment payment;
-    Delivery delivery;
+    private User user;
+    private Product product;
+    private int quantity;
+    private LocalDate dateOfDelivery;
+    private Payment payment;
+    private Delivery delivery;
 
     public OrderProperties(Payment payment, Delivery delivery) {
         this.payment = payment;

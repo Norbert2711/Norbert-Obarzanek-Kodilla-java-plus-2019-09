@@ -4,10 +4,10 @@ import java.util.Objects;
 
 class Delivery {
 
-    String dpd;
-    String deliveryDescription;
+    private String dpd;
+    private String deliveryDescription;
 
-    public Delivery(String dpd,  String deliveryDescription) {
+    public Delivery(String dpd, String deliveryDescription) {
         this.dpd = dpd;
 
         this.deliveryDescription = deliveryDescription;
