@@ -3,21 +3,14 @@ package com.kodilla.good.patterns.challenges.food2Door;
 import java.util.Objects;
 
 public class Product {
+    private String name;
 
-    private double productQuantity;
-    private String typeOfProduct;
-
-    public Product(double productQuantity, String typeOfProduct) {
-        this.productQuantity = productQuantity;
-        this.typeOfProduct = typeOfProduct;
+    public Product(String name) {
+        this.name = name;
     }
 
-    public double getProductQuantity() {
-        return productQuantity;
-    }
-
-    public String getTypeOfProduct() {
-        return typeOfProduct;
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -25,20 +18,18 @@ public class Product {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Product product = (Product) o;
-        return Double.compare(product.productQuantity, productQuantity) == 0 &&
-                Objects.equals(typeOfProduct, product.typeOfProduct);
+        return Objects.equals(name, product.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(productQuantity, typeOfProduct);
+        return Objects.hash(name);
     }
 
     @Override
     public String toString() {
         return "Product{" +
-                "productQuantity=" + productQuantity +
-                ", typeOfProduct='" + typeOfProduct + '\'' +
+                "name='" + name + '\'' +
                 '}';
     }
 }
