@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class ExtraFoodShop implements FoodProducer {
 
-    public Map<Product, Integer> products;
+    private Map<Product, Integer> products;
 
     public ExtraFoodShop(Map<Product, Integer> products) {
         this.products = products;

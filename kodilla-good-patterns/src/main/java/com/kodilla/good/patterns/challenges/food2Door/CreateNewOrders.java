@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class CreateNewOrders {
 
-    public List<OrderRequest> order() {
+    List<OrderRequest> order() {
 
         List<OrderRequest> createNewOrder = new ArrayList();
 
