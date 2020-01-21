@@ -2,13 +2,12 @@ package com.kodilla.good.patterns.challenges.flightSystemV2;
 
 import java.util.HashSet;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class FlightFinder {
 
-    public void availableFlights() {
+    public HashSet<Flight> availableFlights() {
 
-        HashSet<Flight> flights = new HashSet<>();
+       HashSet<Flight> flights = new HashSet<>();
 
         flights.add(new Flight("WARSAW", "NYC"));
         flights.add(new Flight("WARSAW", "WROCLAW"));
@@ -21,23 +20,29 @@ public class FlightFinder {
         flights.add(new Flight("GDANSK", "WROCLAW"));
         flights.add(new Flight("GDANSK", "KRAKOW"));
         flights.add(new Flight("GDANSK", "WARSAW"));
-
+        return flights;
     }
 
     public List<Flight> flightsFrom(String city) {
 
-        for (Flight flight : flightsFrom("GDANSK")) {
+        HashSet<HashSet<Flight>> flyFrom = new HashSet<>();
 
-            if (flight.equals("GDANSK")) ;
+        for (HashSet<Flight> flight : flyFrom) {
+            if (availableFlights().equals("GDANSK")) {
+                flyFrom.add(flight);
+            }
         }
         return flightsFrom(city);
     }
 
-
     public List<Flight> flightsTo(String city) {
 
-        for (Flight flight : flightsTo("NYC")) {
-            if (flight.equals("NYC")) ;
+        HashSet<Flight> flightsTo = new HashSet<>();
+
+        for (Flight flight : flightsTo){
+            if (availableFlights().equals("NYC")) {
+                flightsTo.add(flight);
+            }
         }
         return flightsTo(city);
     }
@@ -46,8 +51,10 @@ public class FlightFinder {
 
         for (Flight from : flightsFrom("GDANSK")) {
             for (Flight to : flightsTo("NYC")) {
-                if (from.getDepartureAirport().equals(to.getDestinationAirport()));
-                System.out.println(" ......... ");
+                if (from.getDepartureAirport().equals(to.getDestinationAirport())) {
+                    System.out.println("connection - true");
+                }
+                System.out.println("connection - false");
             }
         }
         return allFlights(departure, destination);
