@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class GlutenFreeShop implements FoodProducer {
 
-    public Map<Product, Integer> products;
+    private Map<Product, Integer> products;
 
     public GlutenFreeShop(Map<Product, Integer> products) {
         this.products = products;

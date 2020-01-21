@@ -4,7 +4,7 @@ import java.util.List;
 
 public class SendingTheOrder {
 
-    public void sendingAllOrders(List<OrderRequest> allReadyOrders){
+    private void sendingAllOrders(List<OrderRequest> allReadyOrders){
 
         allReadyOrders.stream()
                 .map(n -> {
