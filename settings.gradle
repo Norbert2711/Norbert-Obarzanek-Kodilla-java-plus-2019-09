@@ -7,4 +7,5 @@ include 'Tic-Tac-Toe-Project'
 includeFlat 'Norbert-Obarzanek-Kodilla-java-plus-2019-09 Tic-Tac-Toe-Project'
 findProject(':Norbert-Obarzanek-Kodilla-java-plus-2019-09 Tic-Tac-Toe-Project')?.name = 'Tic-Tac-Toe-First-Project'
 include 'kodilla-good-patterns'
+include 'kodilla-spring-intro'
 
