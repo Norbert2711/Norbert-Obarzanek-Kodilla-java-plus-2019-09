@@ -13,15 +13,15 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 public class ForumUserTestSuite {
 
-@Test
-public void testGetUsername(){
-    //Given
-    ApplicationContext context =
-            new AnnotationConfigApplicationContext("com.kodilla.spring");
-    ForumUser user = context.getBean(ForumUser.class);
-    //When
-    String name = user.getUsername();
-    //Then
-    Assert.assertEquals("John Smith", name);
-}
+    @Test
+    public void testGetUsername() {
+        //Given
+        ApplicationContext context =
+                new AnnotationConfigApplicationContext("com.kodilla.spring");
+        ForumUser user = context.getBean(ForumUser.class);
+        //When
+        String name = user.getUsername();
+        //Then
+        Assert.assertEquals("John Smith", name);
+    }
 }
