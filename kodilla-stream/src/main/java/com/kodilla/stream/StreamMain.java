@@ -55,7 +55,7 @@ public class StreamMain {
                 .filter(book -> book.getYearOfPublication() > 2005)
                 .collect(Collectors.toMap(Book::getSignature, book -> book));
 
-       // System.out.println("# elements: " + theResultMapOfBooks.size());
+        // System.out.println("# elements: " + theResultMapOfBooks.size());
         theResultMapOfBooks.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
@@ -71,4 +71,4 @@ public class StreamMain {
 
         System.out.println(theResultStringOfBooks);
     }
-    }
+}

@@ -2,6 +2,7 @@ package com.kodilla.stream.forumuser;
 
 import java.time.LocalDate;
 import java.util.Objects;
+
 public class ForumUser {
 
     int userID;
@@ -14,7 +15,7 @@ public class ForumUser {
         this.userID = userID;
         this.userName = userName;
         this.sex = sex;
-        this.dayOfBirth = LocalDate.of(year,month,day);
+        this.dayOfBirth = LocalDate.of(year, month, day);
         this.postsNumbers = postsNumbers;
     }
 

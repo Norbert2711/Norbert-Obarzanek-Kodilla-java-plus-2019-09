@@ -1,11 +1,1 @@
-rootProject.name = 'kodilla-course'
-include 'kodilla-testing'
-include 'kodilla-stream'
-include 'Tic-Tac-Toe first project'
-findProject(':Tic-Tac-Toe first project')?.name = 'Tic-Tac-Toe'
-include 'Tic-Tac-Toe-Project'
-includeFlat 'Norbert-Obarzanek-Kodilla-java-plus-2019-09 Tic-Tac-Toe-Project'
-findProject(':Norbert-Obarzanek-Kodilla-java-plus-2019-09 Tic-Tac-Toe-Project')?.name = 'Tic-Tac-Toe-First-Project'
-include 'kodilla-good-patterns'
-include 'kodilla-spring-intro'
-
+rootProject.name = 'kodilla-spring-web'

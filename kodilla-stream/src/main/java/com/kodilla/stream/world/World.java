@@ -1,4 +1,5 @@
 package com.kodilla.stream.world;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +9,7 @@ public class World {
 
     private List<Continent> listWithContinents = new ArrayList<>();
 
-    public boolean addContinent(Continent continent){
+    public boolean addContinent(Continent continent) {
         return listWithContinents.add(continent);
     }
 

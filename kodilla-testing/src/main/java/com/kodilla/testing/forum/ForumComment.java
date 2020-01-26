@@ -25,6 +25,7 @@ public class ForumComment {
     public String getAuthor() {
         return author;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -34,6 +35,7 @@ public class ForumComment {
                 Objects.equals(commentBody, that.commentBody) &&
                 Objects.equals(author, that.author);
     }
+
     @Override
     public int hashCode() {
         int result = forumPost.hashCode();

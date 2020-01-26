@@ -29,27 +29,27 @@ public class FlightFinder {
         return flights;
     }
 
-public Set<Flight> flyFrom (String city){
+    public Set<Flight> flyFrom(String city) {
 
-    HashSet<Flight> flyFrom = new HashSet<>();
+        HashSet<Flight> flyFrom = new HashSet<>();
 
-    for (Flight flight : flights) {
-        if (flight.getDepartureAirport().equals("GDANSK")) {
-            flyFrom.add(flight);
+        for (Flight flight : flights) {
+            if (flight.getDepartureAirport().equals("GDANSK")) {
+                flyFrom.add(flight);
+            }
         }
-    }
 
         return availableFlights().stream()
                 .filter(flight -> flight.getDepartureAirport().equals(city))
                 .collect(Collectors.toSet());
 
-}
+    }
 
-    public Set<Flight> flightsTo (String city) {
+    public Set<Flight> flightsTo(String city) {
 
         HashSet<Flight> flightsTo = new HashSet<>();
 
-        for (Flight flight : flights){
+        for (Flight flight : flights) {
             if (flight.getDestinationAirport().equals("NYC")) {
                 flightsTo.add(flight);
             }
@@ -78,8 +78,8 @@ public Set<Flight> flyFrom (String city){
                 }
                 System.out.println("connection - false");
             }
-            }
+        }
 
-          return  allFlights;
+        return allFlights;
     }
 }

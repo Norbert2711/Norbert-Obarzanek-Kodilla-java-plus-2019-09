@@ -6,6 +6,7 @@ public class Drawer {
     public Drawer(final Shape shape) {
         this.shape = shape;
     }
+
     public String doDrawing() {
         return shape.draw();
     }

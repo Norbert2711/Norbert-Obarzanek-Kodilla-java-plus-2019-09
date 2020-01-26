@@ -12,11 +12,12 @@ public class ForumUser {
     private final String location;
     private final Set<ForumUser> friends = new HashSet<>();
 
-    public Set<String>getLocationsOfFriends(){
+    public Set<String> getLocationsOfFriends() {
         return friends.stream()
-                .map(friend-> friend.getLocation())
+                .map(friend -> friend.getLocation())
                 .collect(Collectors.toSet());
     }
+
     public Set<String> getLocationsOfFriendsOfFriends() {
         return friends.stream()
                 .flatMap(user -> user.getFriends().stream())

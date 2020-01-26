@@ -3,13 +3,13 @@ package com.kodilla.testing.shape;
 import java.util.Objects;
 
 // klasa trojkat
- class Triangle implements Shape {
+class Triangle implements Shape {
 
 
     String name;
     double field;
-    int a=5;
-    int h=8;
+    int a = 5;
+    int h = 8;
 
     public Triangle(String name, double field) {
         this.name = name;
@@ -25,9 +25,10 @@ import java.util.Objects;
 
     @Override
     public double getField() {  //liczy pole trojata
-    field= (1/2)*a*h;
+        field = (1 / 2) * a * h;
         return field;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,6 +39,7 @@ import java.util.Objects;
                 h == triangle.h &&
                 Objects.equals(name, triangle.name);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(name, field, a, h);

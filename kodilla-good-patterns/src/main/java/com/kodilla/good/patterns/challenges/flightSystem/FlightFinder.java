@@ -6,8 +6,6 @@ public class FlightFinder implements FlightSystem {
     public boolean fly(CitiesWithAirports citiesWithAirports, User user) {
 
 
-
-
         return false;
     }
 }

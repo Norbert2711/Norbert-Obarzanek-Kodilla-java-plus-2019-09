@@ -19,14 +19,14 @@ public class Wroclaw extends CitiesWithAirports {
         return flightFromTo;
     }
 
-    public ArrayList<CitiesWithAirports> connectingWithChange(){
+    public ArrayList<CitiesWithAirports> connectingWithChange() {
         //mozliwe przesiadki
-        connectingWithChange.add(new CitiesWithAirports("Wroclaw","WRO",
-                "KR", "GD" ));
-        connectingWithChange.add(new CitiesWithAirports("Wroclaw","WRO",
-                "GD", "KR" ));
-        connectingWithChange.add(new CitiesWithAirports("Wroclaw","WRO",
-                "WAR", "KR" ));
+        connectingWithChange.add(new CitiesWithAirports("Wroclaw", "WRO",
+                "KR", "GD"));
+        connectingWithChange.add(new CitiesWithAirports("Wroclaw", "WRO",
+                "GD", "KR"));
+        connectingWithChange.add(new CitiesWithAirports("Wroclaw", "WRO",
+                "WAR", "KR"));
 
         return connectingWithChange;
     }

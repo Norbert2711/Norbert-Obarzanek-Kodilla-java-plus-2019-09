@@ -6,21 +6,25 @@ import java.util.Objects;
 class Square implements Shape {
     String name;
     double field;
-    int a= 5;
+    int a = 5;
+
     public Square(String name, double field) {
         this.name = name;
-        this.field=field;
-        this.a=a;
+        this.field = field;
+        this.a = a;
     }
+
     @Override
     public String getShapeName() {  //zwroc nazwe figury
         return name;
     }
+
     @Override
     public double getField() {
-        field= a*a;
+        field = a * a;
         return field;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -30,6 +34,7 @@ class Square implements Shape {
                 a == square.a &&
                 Objects.equals(name, square.name);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(name, field, a);

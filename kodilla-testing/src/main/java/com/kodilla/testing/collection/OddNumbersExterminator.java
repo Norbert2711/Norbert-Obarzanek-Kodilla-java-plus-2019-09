@@ -1,4 +1,5 @@
 package com.kodilla.testing.collection;
+
 import java.util.ArrayList;
 
 public class OddNumbersExterminator {
@@ -13,6 +14,7 @@ public class OddNumbersExterminator {
         }
         return parzyste;
     }
+
     public boolean isEmpty() {
         return true;
     }

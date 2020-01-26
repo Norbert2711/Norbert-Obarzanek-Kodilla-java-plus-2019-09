@@ -8,7 +8,7 @@ public class FlightSearchEngine {
     private final Map<String, Boolean> airportMap;
 
     public FlightSearchEngine() {           //konstruktor
-        airportMap=allAirportsBase();
+        airportMap = allAirportsBase();
     }
 
     public Map<String, Boolean> getAirportMap() {
@@ -17,8 +17,8 @@ public class FlightSearchEngine {
 
     boolean findFlight(Flight flight) throws RouteNotFoundException { //wrzucenie wyjatku
         return findAirportName(flight.getArrivalAirport()) &&
-            findAirportName(flight.getDepartureAirport());
-        }
+                findAirportName(flight.getDepartureAirport());
+    }
 
     private boolean findAirportName(String airsNames) throws RouteNotFoundException {
         //wrzucenei wyjatku z klasy "RouteNot..."

@@ -6,7 +6,7 @@ public class Product {
 
     private String name;
     private String productDescription;
-    private  double price;
+    private double price;
 
     public Product(String name, String productDescription, double price) {
         this.name = name;
@@ -46,8 +46,8 @@ public class Product {
         Product product = (Product) o;
         return
                 Double.compare(product.price, price) == 0 &&
-                Objects.equals(name, product.name) &&
-                Objects.equals(productDescription, product.productDescription);
+                        Objects.equals(name, product.name) &&
+                        Objects.equals(productDescription, product.productDescription);
     }
 
     @Override

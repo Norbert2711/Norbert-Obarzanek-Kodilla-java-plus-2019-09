@@ -10,25 +10,25 @@ public class MyLittleShop {
         DataToTheCreatedOrder dataToTheCreatedOrder = new DataToTheCreatedOrder();
         OrderProperties orderProperties = dataToTheCreatedOrder.send();
 
-ProductOrderService productOrderService = new ProductOrderService(new UserInformation() {
-    @Override
-    public void aboutUser(User user) {
-
-    }
-},
-        new CreateOrder() {
+        ProductOrderService productOrderService = new ProductOrderService(new UserInformation() {
             @Override
-            public boolean readyOrderToSold(User user, Product product, int quantity, LocalDate dateOfDelivery, Delivery delivery, Payment payment) {
+            public void aboutUser(User user) {
+
+            }
+        },
+                new CreateOrder() {
+                    @Override
+                    public boolean readyOrderToSold(User user, Product product, int quantity, LocalDate dateOfDelivery, Delivery delivery, Payment payment) {
+                        return false;
+                    }
+                }, new ProductsSold() {
+            @Override
+            public boolean sold(User user, Product product, int quantity, LocalDate dateOfDelivery, Delivery delivery, Payment payment) {
                 return false;
             }
-        }, new ProductsSold() {
-    @Override
-    public boolean sold(User user, Product product, int quantity, LocalDate dateOfDelivery, Delivery delivery, Payment payment) {
-        return false;
-    }
-});
+        });
 
-productOrderService.process(orderProperties);
+        productOrderService.process(orderProperties);
     }
 
 }

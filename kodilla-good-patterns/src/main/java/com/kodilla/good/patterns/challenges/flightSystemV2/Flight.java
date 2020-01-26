@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Flight {
 
-private String departureAirport;
-private String destinationAirport;
+    private String departureAirport;
+    private String destinationAirport;
 
     public Flight(String departureAirport, String destinationAirport) {
         this.departureAirport = departureAirport;

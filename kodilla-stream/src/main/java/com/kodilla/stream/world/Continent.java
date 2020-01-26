@@ -20,9 +20,10 @@ public class Continent {
         this.listWithCountries = countries;
     }
 
-    List<Country> getListWithCountries(){
+    List<Country> getListWithCountries() {
         return listWithCountries;
     }
+
     public void addCountry(Country country) {
         listWithCountries.add(country);
     }

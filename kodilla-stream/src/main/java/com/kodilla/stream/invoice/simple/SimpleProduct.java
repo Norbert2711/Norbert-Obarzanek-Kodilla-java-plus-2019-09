@@ -1,4 +1,5 @@
 package com.kodilla.stream.invoice.simple;
+
 import java.util.Objects;
 
 public class SimpleProduct {
@@ -9,12 +10,15 @@ public class SimpleProduct {
         this.productName = productName;
         this.productPrice = productPrice;
     }
+
     public String getProductName() {
         return productName;
     }
+
     double getProductPrice() {
         return productPrice;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -22,6 +26,7 @@ public class SimpleProduct {
         SimpleProduct that = (SimpleProduct) o;
         return Objects.equals(productName, that.productName);
     }
+
     @Override
     public int hashCode() {
         return Objects.hash(productName);

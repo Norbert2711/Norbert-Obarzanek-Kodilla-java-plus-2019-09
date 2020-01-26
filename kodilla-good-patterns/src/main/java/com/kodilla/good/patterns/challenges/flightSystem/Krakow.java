@@ -18,15 +18,16 @@ public class Krakow extends CitiesWithAirports {
         flightFromTo.add(new CitiesWithAirports("Krakow", "KR", "WAR"));
 
         return flightFromTo;
-}
-    public ArrayList<CitiesWithAirports> connectingWithChange(){
+    }
 
-        connectingWithChange.add(new CitiesWithAirports("Krakow","KR","WRO",
-                "WAR" ));
-        connectingWithChange.add(new CitiesWithAirports("Krakow","KR","WAR",
-                "GD" ));
-        connectingWithChange.add(new CitiesWithAirports("Krakow","KR","GD",
-                "WAR" ));
+    public ArrayList<CitiesWithAirports> connectingWithChange() {
+
+        connectingWithChange.add(new CitiesWithAirports("Krakow", "KR", "WRO",
+                "WAR"));
+        connectingWithChange.add(new CitiesWithAirports("Krakow", "KR", "WAR",
+                "GD"));
+        connectingWithChange.add(new CitiesWithAirports("Krakow", "KR", "GD",
+                "WAR"));
 
         return connectingWithChange;
     }

@@ -42,7 +42,7 @@ public class BookLibrary {
     }
 
     public int returnBooks(LibraryUser libraryUser) {
-List<Integer> booksReturned = new ArrayList<>();
+        List<Integer> booksReturned = new ArrayList<>();
         int books = libraryDatabase.returnBooks(libraryUser);
         booksReturned.add(books);
         return booksReturned.size();

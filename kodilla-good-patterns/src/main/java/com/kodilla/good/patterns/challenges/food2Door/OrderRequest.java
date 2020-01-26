@@ -9,7 +9,7 @@ public class OrderRequest {
     private FoodProducer foodProducer;
     private Map<Product, Integer> listOfOrderProducts;
 
-    OrderRequest(Customer customer, FoodProducer foodProducer, Map<Product, Integer>listOfOrderProducts) {
+    OrderRequest(Customer customer, FoodProducer foodProducer, Map<Product, Integer> listOfOrderProducts) {
         this.customer = customer;
         this.foodProducer = foodProducer;
         this.listOfOrderProducts = listOfOrderProducts;

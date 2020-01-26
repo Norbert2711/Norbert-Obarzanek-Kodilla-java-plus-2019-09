@@ -170,6 +170,6 @@ public class BoardTestSuite {
         double average = sumOfElementsOfTaskDays / tasksQuantity;
 
         //Then
-Assert.assertEquals(10.0,average,000.1);
+        Assert.assertEquals(10.0, average, 000.1);
     }
 }

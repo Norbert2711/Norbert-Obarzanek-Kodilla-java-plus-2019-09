@@ -14,7 +14,6 @@ public class Payment {
     }
 
 
-
     public String getCash() {
         return card;
     }
@@ -30,7 +29,7 @@ public class Payment {
         Payment payment = (Payment) o;
         return
                 Objects.equals(card, payment.card) &&
-                Objects.equals(paymentDescription, payment.paymentDescription);
+                        Objects.equals(paymentDescription, payment.paymentDescription);
     }
 
     @Override
@@ -43,6 +42,6 @@ public class Payment {
 
     @Override
     public int hashCode() {
-        return Objects.hash( card, paymentDescription);
+        return Objects.hash(card, paymentDescription);
     }
 }
