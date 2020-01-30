@@ -1,4 +1,5 @@
 package com.kodilla.good.patterns.challenges.flightSystemv3;
+
 import java.util.Set;
 
 public class Play2 {

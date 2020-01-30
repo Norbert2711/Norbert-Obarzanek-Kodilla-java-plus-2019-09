@@ -53,7 +53,7 @@ public class FlightFinder2 {
         for (Flight2 from : flyFrom(departure)) {
             for (Flight2 to : flightsTo(destination)) {
 
-                if(from.getDestinationAirport().equals(to.getDepartureAirport())){
+                if (from.getDestinationAirport().equals(to.getDepartureAirport())) {
                     allFlights.add(from);
                     allFlights.add(to);
                 }

@@ -1,9 +1,22 @@
 package com.kodilla.patterns.singleton;
 
-public final class SettingsFileEngine {
-    private String fileName = "";
+public class SettingsFileEngine {
 
-    public SettingsFileEngine() {
+    private String fileName = " ";
+    private static SettingsFileEngine settingsFileEngineInstance = null;
+
+    private SettingsFileEngine() {
+    }
+
+    public static SettingsFileEngine getInstance() {
+        if (settingsFileEngineInstance == null) {
+            synchronized(SettingsFileEngine.class) {
+                if (settingsFileEngineInstance == null) {
+                    settingsFileEngineInstance = new SettingsFileEngine();
+                }
+            }
+        }
+        return settingsFileEngineInstance;
     }
 
     public String getFileName() {
