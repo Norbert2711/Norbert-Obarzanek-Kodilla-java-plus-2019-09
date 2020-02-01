@@ -16,6 +16,10 @@ public final class Library implements Cloneable {
         books.add(book);
     }
 
+    public void removeBook(Book book) {
+        books.remove(book);
+    }
+
     public String getName() {
         return name;
     }
@@ -34,10 +38,9 @@ public final class Library implements Cloneable {
 
     @Override
     public String toString() {
-        return "Library{" +
-                "name='" + name + '\'' +
-                ", books=" + books +
-                '}';
+        return "    Library" +
+                ", " + name  +
+                ", " + books;
     }
 
     public Library shallowCopy() throws CloneNotSupportedException {
@@ -49,7 +52,7 @@ public final class Library implements Cloneable {
         clonedLibrary.setBooks(new HashSet<>());
 
         for (Book book : getBooks()) {
-            clonedLibrary.addBook(new Book(book.getTitle(),book.getAuthor(),book.getPublicationDate()));
+            clonedLibrary.addBook(new Book(book.getTitle(), book.getAuthor(), book.getPublicationDate()));
         }
         return clonedLibrary;
     }
