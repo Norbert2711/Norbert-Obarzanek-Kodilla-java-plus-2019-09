@@ -52,7 +52,7 @@ public class LibraryTestSuite {
         //Then
         System.out.println("1st Library size: " + size1);
         System.out.println("2nd Cloned Library size: " + size2);
-        System.out.println("3nd Deep cloned Library size: " + size3);
+        System.out.println("3rd Deep cloned Library size: " + size3);
         System.out.println(library);
         System.out.println(clonedLibrary);
         System.out.println(deepClonedLibrary);
