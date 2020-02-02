@@ -22,7 +22,7 @@ public class TaskList {
                 '}';
     }
 
-    public boolean addTask(String taskDescription) {
-        return tasks.add(taskDescription);
+    public void addTask(String taskDescription) {
+        tasks.add(taskDescription);
     }
 }
