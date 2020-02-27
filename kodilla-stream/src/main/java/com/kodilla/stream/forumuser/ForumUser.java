@@ -43,11 +43,11 @@ public class ForumUser {
     @Override
     public String toString() {
         return "ForumUser{" +
-                "userID=" + userID +
-                ", userName='" + userName + '\'' +
-                ", sex=" + sex +
-                ", dayOfBridth=" + dayOfBirth +
-                ", postsNumbers=" + postsNumbers +
+                "userID = " + userID +
+                ", userName = '" + userName + '\'' +
+                ", sex =" + sex +
+                ", dayOfBridth = " + dayOfBirth +
+                ", postsNumbers = " + postsNumbers +
                 '}';
     }
 

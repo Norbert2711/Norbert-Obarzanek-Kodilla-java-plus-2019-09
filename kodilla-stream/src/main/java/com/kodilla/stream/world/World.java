@@ -6,7 +6,6 @@ import java.util.List;
 
 public class World {
 
-
     private List<Continent> listWithContinents = new ArrayList<>();
 
     public boolean addContinent(Continent continent) {

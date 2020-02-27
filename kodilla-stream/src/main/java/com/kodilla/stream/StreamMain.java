@@ -3,7 +3,10 @@ package com.kodilla.stream;
 import com.kodilla.stream.book.Book;
 import com.kodilla.stream.book.BookDirectory;
 import com.kodilla.stream.iterate.NumbersGenerator;
+import com.kodilla.stream.lambda.ExecuteSaySomething;
+import com.kodilla.stream.lambda.Executor;
 import com.kodilla.stream.lambda.ExpressionExecutor;
+import com.kodilla.stream.lambda.Processor;
 import com.kodilla.stream.person.People;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
@@ -12,6 +15,17 @@ import java.util.stream.Collectors;
 
 public class StreamMain {
     public static void main(String[] args) {
+
+        System.out.println();
+        Processor processor = new Processor();
+        Executor codeToExecute = () -> System.out.println("This is example text lambda ****");
+        processor.execute(codeToExecute);
+        processor.execute(() -> System.out.println("This is example text lambda - " +
+                "przekazany wprost do argumentu metody execute"));
+
+        System.out.println();
+        System.out.println();
+
         ExpressionExecutor expressionExecutor = new ExpressionExecutor();
 
         System.out.println("Calculating expressions with lambdas");

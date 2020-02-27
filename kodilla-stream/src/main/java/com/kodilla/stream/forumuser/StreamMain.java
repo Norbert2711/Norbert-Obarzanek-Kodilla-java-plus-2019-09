@@ -24,6 +24,7 @@ public class StreamMain {
                 .filter(user -> user.getPostsNumbers() != 0)
                 .filter(user -> ChronoUnit.YEARS.between(user.dayOfBirth, LocalDate.now()) > 20)
                 .collect(Collectors.toMap(ForumUser::getUserID, user -> user));
+
         userList.entrySet().stream()
                 .map(entry -> entry.getKey() + ": " + entry.getValue())
                 .forEach(System.out::println);
