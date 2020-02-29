@@ -52,6 +52,7 @@ public final class TaskList {
         this.description = description;
     }
 
+    @OneToMany
     public List<Task> getTasks() {
         return tasks;
     }
