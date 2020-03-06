@@ -5,6 +5,12 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedNativeQuery(              //sql "like" - jak - porownanie nazwisko
+        name = "Employee.searchForEmployeeName",
+        query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE ('%', :LASTNAME, '%')",
+        resultClass = Employee.class
+)
+
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
