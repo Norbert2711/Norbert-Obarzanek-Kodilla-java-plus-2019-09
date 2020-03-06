@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "PRODUCTS")
 public class Item {
+
     private int id;
     private BigDecimal price;
     private BigDecimal value;

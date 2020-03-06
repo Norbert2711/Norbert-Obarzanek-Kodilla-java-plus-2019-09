@@ -10,9 +10,9 @@ import java.util.List;
 @Table(name = "INOVICE")
 public class Invoice {
 
-    int id;
-    String number;
-    List<Item> items = new ArrayList<>();
+    private int id;
+    private String number;
+    private List<Item> items = new ArrayList<>();
 
     public Invoice(String number, List<Item> items) {
         this.number = number;
