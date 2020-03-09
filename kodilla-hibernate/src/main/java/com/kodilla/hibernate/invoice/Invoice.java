@@ -1,15 +1,13 @@
 package com.kodilla.hibernate.invoice;
 
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "INOVICE")
+@Table(name = "INVOICES")
 public class Invoice {
-
     private int id;
     private String number;
     private List<Item> items = new ArrayList<>();
@@ -48,11 +46,11 @@ public class Invoice {
         return items;
     }
 
-    public void setId(int id) {
+    private void setId(int id) {
         this.id = id;
     }
 
-    public void setNumber(String number) {
+    private void setNumber(String number) {
         this.number = number;
     }
 

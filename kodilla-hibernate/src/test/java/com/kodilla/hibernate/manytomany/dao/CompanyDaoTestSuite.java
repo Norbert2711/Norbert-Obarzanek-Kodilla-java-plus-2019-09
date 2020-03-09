@@ -20,7 +20,7 @@ public class CompanyDaoTestSuite {
     EmployeeDao employeeDao;
 
     @Test
-    public void testSaveManyToMany(){
+    public void testSaveManyToMany() {
         //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
@@ -66,43 +66,51 @@ public class CompanyDaoTestSuite {
     }
 
     @Test
-    public void testLookingForcompanyAndEmployeeNames(){
+    public void testNamedQueries(){
 
+        //Given
         Employee johnSmith = new Employee("John", "Smith");
         Employee stephanieClarckson = new Employee("Stephanie", "Clarckson");
-        Employee lindaKovalsky = new Employee("Linda", "Kovalsky");
+        Employee lindaSmith = new Employee("Linda", "Smith");
 
         Company softwareMachine = new Company("Software Machine");
-        Company dataMasters = new Company("Data Masters");
+        Company softDataMasters = new Company("Soft Data Masters");
         Company greyMatter = new Company("Grey Matter");
 
         softwareMachine.getEmployees().add(johnSmith);
-        dataMasters.getEmployees().add(stephanieClarckson);
-        dataMasters.getEmployees().add(lindaKovalsky);
+        softDataMasters.getEmployees().add(stephanieClarckson);
+        softDataMasters.getEmployees().add(lindaSmith);
         greyMatter.getEmployees().add(johnSmith);
-        greyMatter.getEmployees().add(lindaKovalsky);
+        greyMatter.getEmployees().add(lindaSmith);
 
         johnSmith.getCompanies().add(softwareMachine);
         johnSmith.getCompanies().add(greyMatter);
-        stephanieClarckson.getCompanies().add(dataMasters);
-        lindaKovalsky.getCompanies().add(dataMasters);
-        lindaKovalsky.getCompanies().add(greyMatter);
+        stephanieClarckson.getCompanies().add(softDataMasters);
+        lindaSmith.getCompanies().add(softDataMasters);
+        lindaSmith.getCompanies().add(greyMatter);
 
-        companyDao.save(greyMatter);
-        companyDao.save(dataMasters);
         companyDao.save(softwareMachine);
+        int id1 = softDataMasters.getId();
+        companyDao.save(softDataMasters);
+        int id2 = softwareMachine.getId();
+        companyDao.save(greyMatter);
+        int id3 = greyMatter.getId();
 
         //When
-        List<Employee> employeesFullLastName = employeeDao.searchForEmployeeName("Kovalsky");
-        List<Company> firstThreeLettersOfTheCompanyName = companyDao.findCcompanyByName("Dat");
+        List<Employee> lastName = employeeDao.searchForEmployeeName("Smith");
+        List<Company> nameStartedWith = companyDao.findCompanyByName("Sof");
 
         //Then
-        Assert.assertEquals(1, firstThreeLettersOfTheCompanyName.size());
-        Assert.assertEquals(1, employeesFullLastName.size());
+        Assert.assertEquals(2, lastName.size());
+        Assert.assertEquals(2, nameStartedWith.size());
 
+        //CleanUp
+        try {
+            companyDao.deleteById(id1);
+            companyDao.deleteById(id2);
+            companyDao.deleteById(id3);
+        } catch (Exception e) {
+            //do nothing
+        }
     }
-
-
-
-
 }

@@ -10,16 +10,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import javax.persistence.Table;
+import javax.transaction.Transactional;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+@Transactional
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class InvoiceDaoTestSuite {
 @Autowired
-    InoviceDao inoviceDao;
+InvoiceDao invoiceDao;
     @Test
     public void testInvoiceDaoSave() {
 
@@ -32,9 +33,10 @@ public class InvoiceDaoTestSuite {
         Product tacticalVest = new Product("Tactical vest");
        // Product belt = new Product("Belt");
 
-        Item itemWal = new Item(new BigDecimal(2500),new BigDecimal(56),5,walther);     //zamowienie
-        Item itemHand = new Item(new BigDecimal(2000),new BigDecimal(327),49,handcuffs);
-        Item itemTact = new Item(new BigDecimal(1500),new BigDecimal(33),25,tacticalVest);
+                                                                        //zamowienie
+        Item itemWal = new Item ( walther, new BigDecimal(56),6);
+        Item itemHand = new Item(handcuffs,new BigDecimal(2000),49);
+        Item itemTact = new Item(tacticalVest,new BigDecimal(1500),25);
 
         itemWal.setInvoice(invoice1);
         itemHand.setInvoice(invoice1);  //do zamowien dolaczona jest faktura
@@ -46,14 +48,15 @@ public class InvoiceDaoTestSuite {
         items.add(itemTact);
 
         invoice1.setItems(items);       //faktura z lista
-
+        int id = invoice1.getId();
         //When
-        inoviceDao.save(invoice1);
-        int inoviceId = invoice1.getId();
+        invoiceDao.save(invoice1);
         int itemSize = invoice1.getItems().size();
 
         //Then
         Assert.assertEquals(3, itemSize);
-        Assert.assertEquals(0, inoviceId);
+
+        //CleanUp
+        invoiceDao.delete(invoice1);
     }
 }

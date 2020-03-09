@@ -7,7 +7,7 @@ import java.util.List;
 
 @NamedNativeQuery(              //sql "like" - jak - porownanie nazwisko
         name = "Employee.searchForEmployeeName",
-        query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE ('%', :LASTNAME, '%')",
+        query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE CONCAT('%', :LASTNAME, '%')",
         resultClass = Employee.class
 )
 

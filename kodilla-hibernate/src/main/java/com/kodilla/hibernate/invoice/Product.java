@@ -6,11 +6,10 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(name = "PRODUCTS")
 public class Product {
-
     private int id;
     private String name;
 
-    public Product( String name) {
+    public Product(String name) {
         this.name = name;
     }
 
@@ -25,17 +24,16 @@ public class Product {
         return id;
     }
 
-    @NotNull
     @Column(name = "NAME")
     public String getName() {
         return name;
     }
 
-    public void setId(int id) {
+    private void setId(int id) {
         this.id = id;
     }
 
-    public void setName(String name) {
+    private void setName(String name) {
         this.name = name;
     }
 }

@@ -7,4 +7,7 @@ include 'kodilla-patterns'
 include 'kodilla-patterns'
 include 'kodilla-jdbc'
 include 'kodilla-hibernate'
+include 'com.crud'
+include 'com.crud'
+include 'tasks'
 

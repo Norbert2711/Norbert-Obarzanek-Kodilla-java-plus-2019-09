@@ -1,3 +1,4 @@
+
 package com.kodilla.hibernate.invoice.dao;
 
 import com.kodilla.hibernate.invoice.Product;

@@ -1,3 +1,4 @@
+
 package com.kodilla.hibernate.invoice.dao;
 
 import com.kodilla.hibernate.invoice.Invoice;
@@ -8,6 +9,6 @@ import javax.transaction.Transactional;
 
 @Transactional
 @Repository
-public interface InoviceDao extends CrudRepository<Invoice, Integer> {
+public interface InvoiceDao extends CrudRepository<Invoice, Integer> {
     Invoice findById(int id);
 }
