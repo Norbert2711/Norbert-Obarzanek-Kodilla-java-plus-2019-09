@@ -10,7 +10,7 @@ public class SettingsFileEngine {
 
     public static SettingsFileEngine getInstance() {
         if (settingsFileEngineInstance == null) {
-            synchronized(SettingsFileEngine.class) {
+            synchronized (SettingsFileEngine.class) {
                 if (settingsFileEngineInstance == null) {
                     settingsFileEngineInstance = new SettingsFileEngine();
                 }

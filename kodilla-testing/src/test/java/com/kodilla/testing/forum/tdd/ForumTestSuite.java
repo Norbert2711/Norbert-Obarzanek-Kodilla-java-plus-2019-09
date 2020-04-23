@@ -3,7 +3,6 @@ package com.kodilla.testing.forum.tdd;
 import com.kodilla.testing.forum.ForumComment;
 import com.kodilla.testing.forum.ForumPost;
 import com.kodilla.testing.forum.ForumUser;
-import org.junit.*;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -17,7 +17,7 @@ public class Invoice {
         this.items = items;
     }
 
-    public Invoice (String number){
+    public Invoice(String number) {
         this.number = number;
     }
 

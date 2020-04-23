@@ -5,13 +5,13 @@ public class Logger {
     private String lastLog = "";
     private static Logger logger = null;
 
-    private Logger(){
+    private Logger() {
     }
 
-    public static Logger getInstance(){
-        if( logger == null){
-            synchronized (Logger.class){
-                if(logger == null){
+    public static Logger getInstance() {
+        if (logger == null) {
+            synchronized (Logger.class) {
+                if (logger == null) {
                     logger = new Logger();
                 }
             }

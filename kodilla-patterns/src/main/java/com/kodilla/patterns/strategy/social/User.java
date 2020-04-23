@@ -15,7 +15,7 @@ public class User {
         return name;
     }
 
-    public String sharePost(){
+    public String sharePost() {
         return socialPublisher.share();
     }
 

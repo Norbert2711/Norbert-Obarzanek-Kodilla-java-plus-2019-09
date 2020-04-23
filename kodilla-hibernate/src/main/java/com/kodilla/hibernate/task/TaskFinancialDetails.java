@@ -1,9 +1,9 @@
 package com.kodilla.hibernate.task;
 
 import javax.persistence.*;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
-import javax.persistence.Id;
 
 @Entity
 @Table(name = "TASKS_FINANCIALS")

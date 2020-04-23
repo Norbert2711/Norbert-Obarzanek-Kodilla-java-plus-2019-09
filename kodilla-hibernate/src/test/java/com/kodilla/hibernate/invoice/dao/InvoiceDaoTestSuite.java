@@ -19,24 +19,25 @@ import java.util.List;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class InvoiceDaoTestSuite {
-@Autowired
-InvoiceDao invoiceDao;
+    @Autowired
+    InvoiceDao invoiceDao;
+
     @Test
     public void testInvoiceDaoSave() {
 
         //Given
-        Invoice invoice1 = new Invoice("2345" );        //faktura
+        Invoice invoice1 = new Invoice("2345");        //faktura
         //Invoice invoice2 = new Invoice("5642" );
 
         Product walther = new Product("P-99 Walther");
         Product handcuffs = new Product("Handcuffs");       //produkty
         Product tacticalVest = new Product("Tactical vest");
-       // Product belt = new Product("Belt");
+        // Product belt = new Product("Belt");
 
-                                                                        //zamowienie
-        Item itemWal = new Item ( walther, new BigDecimal(56),6);
-        Item itemHand = new Item(handcuffs,new BigDecimal(2000),49);
-        Item itemTact = new Item(tacticalVest,new BigDecimal(1500),25);
+        //zamowienie
+        Item itemWal = new Item(walther, new BigDecimal(56), 6);
+        Item itemHand = new Item(handcuffs, new BigDecimal(2000), 49);
+        Item itemTact = new Item(tacticalVest, new BigDecimal(1500), 25);
 
         itemWal.setInvoice(invoice1);
         itemHand.setInvoice(invoice1);  //do zamowien dolaczona jest faktura

@@ -1,7 +1,5 @@
 package com.kodilla.patterns.builder.bigmac;
 
-import com.kodilla.patterns.builder.pizza.Pizza;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -55,13 +53,13 @@ public class Bigmac {
     @Override
     public String toString() {
         return "VERY Bigmac " +
-                "bun = " + bun  +
+                "bun = " + bun +
                 ", burgers = " + burgers +
-                ", sauce = " + sauce  +
+                ", sauce = " + sauce +
                 ", ingredients = " + ingredients;
     }
 
-    public static class BigmacBuilder{
+    public static class BigmacBuilder {
 
         private String bun;
         private int burgers;
@@ -78,7 +76,7 @@ public class Bigmac {
             return this;
         }
 
-        public BigmacBuilder sauce (String sauce) {
+        public BigmacBuilder sauce(String sauce) {
             this.sauce = sauce;
             return this;
         }
@@ -88,7 +86,7 @@ public class Bigmac {
             return this;
         }
 
-            public Bigmac build(){
+        public Bigmac build() {
             return new Bigmac(bun, burgers, sauce, ingredients);
         }
     }

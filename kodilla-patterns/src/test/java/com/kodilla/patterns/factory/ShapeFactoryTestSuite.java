@@ -1,11 +1,12 @@
 package com.kodilla.patterns.factory;
+
 import org.junit.Assert;
 import org.junit.Test;
 
 public class ShapeFactoryTestSuite {
 
     @Test
-    public void testFactocyCircle(){
+    public void testFactocyCircle() {
 
         //Given
         ShapeFactory shapeFactory = new ShapeFactory();

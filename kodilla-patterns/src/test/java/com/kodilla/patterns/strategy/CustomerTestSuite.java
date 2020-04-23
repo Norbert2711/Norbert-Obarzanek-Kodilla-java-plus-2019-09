@@ -1,4 +1,5 @@
 package com.kodilla.patterns.strategy;
+
 import com.kodilla.patterns.strategy.predictors.AggressivePredictor;
 import org.junit.Assert;
 import org.junit.Test;

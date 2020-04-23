@@ -6,7 +6,7 @@ import org.junit.Test;
 public class BigmacTestSuite {
 
     @Test
-    public void testMakeDreamBurger(){
+    public void testMakeDreamBurger() {
 
         //Given
         Bigmac bigmac = new Bigmac.BigmacBuilder()

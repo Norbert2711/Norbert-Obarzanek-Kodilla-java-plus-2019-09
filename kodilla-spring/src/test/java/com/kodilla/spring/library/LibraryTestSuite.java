@@ -1,6 +1,5 @@
 package com.kodilla.spring.library;
 
-import net.minidev.json.JSONUtil;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

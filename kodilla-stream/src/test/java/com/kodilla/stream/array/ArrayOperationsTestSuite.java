@@ -3,13 +3,6 @@ package com.kodilla.stream.array;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.OptionalDouble;
-import java.util.stream.IntStream;
-
 import static org.junit.Assert.*;
 
 public class ArrayOperationsTestSuite {

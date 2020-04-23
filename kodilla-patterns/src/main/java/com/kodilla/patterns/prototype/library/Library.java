@@ -39,7 +39,7 @@ public final class Library implements Cloneable {
     @Override
     public String toString() {
         return "    Library" +
-                ", " + name  +
+                ", " + name +
                 ", " + books;
     }
 
