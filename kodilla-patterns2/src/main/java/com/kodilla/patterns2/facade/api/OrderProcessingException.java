@@ -1,4 +1,4 @@
-package java.com.kodilla.patterns2.facade.api;
+package com.kodilla.patterns2.facade.api;
 
 public class OrderProcessingException extends Exception {
 

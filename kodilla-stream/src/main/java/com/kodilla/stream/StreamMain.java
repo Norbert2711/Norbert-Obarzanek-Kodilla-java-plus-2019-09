@@ -9,6 +9,7 @@ import com.kodilla.stream.lambda.Processor;
 import com.kodilla.stream.person.People;
 import com.kodilla.stream.reference.FunctionalCalculator;
 
+import javax.annotation.processing.Processor;
 import java.util.Map;
 import java.util.stream.Collectors;
 
