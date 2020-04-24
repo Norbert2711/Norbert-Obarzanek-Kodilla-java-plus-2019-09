@@ -71,8 +71,8 @@ public class SearchFacadeTest {
         resultEmployees.add(lindaKovalsky);
 
         //When
-        List<Company> companyName = searchFacade.companyList("grey");
-        List<Employee> employeeName = searchFacade.employeeList("step");
+        List<Company> companyName = searchFacade.companyList("Grey");
+        List<Employee> employeeName = searchFacade.employeeList("Step");
 
         //Then
         Assert.assertEquals(resultCompanies, companyName.size());
