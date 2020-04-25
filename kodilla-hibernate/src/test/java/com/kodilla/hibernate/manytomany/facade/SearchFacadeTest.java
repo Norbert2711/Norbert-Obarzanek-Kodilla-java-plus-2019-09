@@ -64,8 +64,7 @@ public class SearchFacadeTest {
         List<Employee> employeeName = searchFacade.employeeList("Step");
 
         //Then
-        Assert.assertEquals("Grey", companyName);
-        Assert.assertEquals("Step", employeeName);
+        Assert.assertEquals(searchFacade.companyList(greyMatter.getName()), companyName);
+        Assert.assertEquals(searchFacade.employeeList(stephanieClarckson.getFirstname()), employeeName);
     }
-
 }
