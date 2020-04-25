@@ -27,9 +27,6 @@ public class SearchFacadeTest {
     @Autowired
     private SearchFacade searchFacade;
 
-    public List<Employee> resultEmployees = new ArrayList<>();
-    public List<Company> resultCompanies = new ArrayList<>();
-
     @Test
     public void searchByCompanyNameAndEmployees() {
 
@@ -58,25 +55,17 @@ public class SearchFacadeTest {
         companyDao.save(dataMasters);
         companyDao.save(greyMatter);
 
-        resultCompanies.add(softwareMachine);
-        resultCompanies.add(greyMatter);
-        resultCompanies.add(dataMasters);
-
         employeeDao.save(johnSmith);
         employeeDao.save(stephanieClarckson);
         employeeDao.save(lindaKovalsky);
-
-        resultEmployees.add(johnSmith);
-        resultEmployees.add(stephanieClarckson);
-        resultEmployees.add(lindaKovalsky);
 
         //When
         List<Company> companyName = searchFacade.companyList("Grey");
         List<Employee> employeeName = searchFacade.employeeList("Step");
 
         //Then
-        Assert.assertEquals(resultCompanies, companyName.size());
-        Assert.assertEquals(resultEmployees, employeeName.size());
+        Assert.assertEquals("Grey", companyName);
+        Assert.assertEquals("Step", employeeName);
     }
 
 }
