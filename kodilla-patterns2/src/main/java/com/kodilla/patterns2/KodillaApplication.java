@@ -1,13 +1,12 @@
-package com.kodilla.kodillapaterns2;
+package com.kodilla.patterns2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KodillaPaterns2Application {
+public class KodillaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(KodillaPaterns2Application.class, args);
+        SpringApplication.run(KodillaApplication.class, args);
     }
-
 }

@@ -12,7 +12,6 @@ import java.util.Random;
 @Service
 public class ShopService {
 
-    @Autowired
     private final List<Order> orders = new ArrayList<>();
 
     @Autowired
