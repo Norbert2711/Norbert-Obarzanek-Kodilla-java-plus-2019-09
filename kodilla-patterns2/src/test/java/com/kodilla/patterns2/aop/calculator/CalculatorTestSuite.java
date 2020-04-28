@@ -1,17 +1,19 @@
 package com.kodilla.patterns2.aop.calculator;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
+
 import static org.junit.Assert.assertEquals;
 
-@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CalculatorTestSuite {
@@ -30,6 +32,7 @@ public class CalculatorTestSuite {
         LOGGER.info("Testing add method: " + result);
         assertEquals(25, result, 0);
     }
+
     @Test
     public void testSub() {
         //Given
@@ -39,6 +42,7 @@ public class CalculatorTestSuite {
         LOGGER.info("Testing sub method: " + result);
         assertEquals(-5, result, 0);
     }
+
     @Test
     public void testMul() {
         //Given
@@ -48,6 +52,7 @@ public class CalculatorTestSuite {
         LOGGER.info("Testing mul method: " + result);
         assertEquals(150, result, 0);
     }
+
     @Test
     public void testDiv() {
         //Given
@@ -56,5 +61,16 @@ public class CalculatorTestSuite {
         //Then
         LOGGER.info("Testing div method: " + result);
         assertEquals(3, result, 0);
+    }
+
+    @Test
+    public void testFactorial(){
+        //Given
+        //When
+        BigDecimal result = calculator.factorial(new BigDecimal(1000));
+        //Then
+        LOGGER.info("Testing factorial method");
+        System.out.println(result);
+        Assert.assertTrue(BigDecimal.ZERO.compareTo(result) < 0 );
     }
 }

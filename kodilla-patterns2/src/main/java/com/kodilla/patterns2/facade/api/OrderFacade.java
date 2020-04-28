@@ -1,8 +1,10 @@
 package com.kodilla.patterns2.facade.api;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Service;
 
 import com.kodilla.patterns2.facade.ShopService;
@@ -10,6 +12,7 @@ import java.math.BigDecimal;
 
 
 @Service
+@EnableAspectJAutoProxy
 public class OrderFacade {
 
     @Autowired
@@ -27,30 +30,30 @@ public class OrderFacade {
         }
         try {
             for (ItemDto orderItem : order.getItems()) {
-                LOGGER.error("Adding item" + orderItem.getProductsId() + ", " +
+                LOGGER.info("Adding item" + orderItem.getProductsId() + ", " +
                         orderItem.getQuantity() + "pcs");
                 shopService.addItem(orderId, orderItem.getProductsId(), orderItem.getQuantity());
             }
             BigDecimal value = shopService.calculateValue(orderId);
-            LOGGER.error("Order value is: " + value + "USD");
+            LOGGER.info("Order value is: " + value + "USD");
             if (!shopService.doPayment(orderId)) {
                 LOGGER.error(OrderProcessingException.ERR_PAYMENT_REJECTED);
                 wasError = true;
                 throw new OrderProcessingException(OrderProcessingException.ERR_PAYMENT_REJECTED);
             }
-            LOGGER.error("Payment for order was done");
+            LOGGER.info("Payment for order was done");
             if (!shopService.verifyOrder(orderId)) {
                 LOGGER.error(OrderProcessingException.ERR_VERIFICATION_ERROR);
                 wasError = true;
                 throw new OrderProcessingException(OrderProcessingException.ERR_VERIFICATION_ERROR);
             }
-            LOGGER.error("Order is ready to submit");
+            LOGGER.info("Order is ready to submit");
             if (!shopService.submitOrder(orderId)) {
                 LOGGER.error(OrderProcessingException.ERR_SUBMITTING_ERROR);
                 wasError = true;
                 throw new OrderProcessingException(OrderProcessingException.ERR_SUBMITTING_ERROR);
             }
-            LOGGER.error("Order: " + orderId + "submited");
+            LOGGER.info("Order: " + orderId + "submited");
         } finally {
             if (wasError) {
                 LOGGER.error("Cancelling order " + orderId);

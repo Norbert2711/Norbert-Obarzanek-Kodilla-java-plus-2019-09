@@ -15,4 +15,10 @@ public class OrderDto {
         return items;
     }
 
+    @Override
+    public String toString() {
+        return "OrderDto{" +
+                "items=" + items +
+                '}';
+    }
 }

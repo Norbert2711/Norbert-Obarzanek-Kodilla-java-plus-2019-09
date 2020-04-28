@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -51,20 +50,34 @@ public class SearchFacadeTest {
         lindaKovalsky.getCompanies().add(dataMasters);
         lindaKovalsky.getCompanies().add(greyMatter);
 
-        companyDao.save(softwareMachine);
-        companyDao.save(dataMasters);
-        companyDao.save(greyMatter);
-
         employeeDao.save(johnSmith);
+        int johnSmithId = johnSmith.getId();
         employeeDao.save(stephanieClarckson);
+        int stephanieClarksonId = stephanieClarckson.getId();
         employeeDao.save(lindaKovalsky);
+        int lindaKovalskyId = lindaKovalsky.getId();
+
+        companyDao.save(softwareMachine);
+        int softwareMachineId = softwareMachine.getId();
+        companyDao.save(dataMasters);
+        int dataMastersId = dataMasters.getId();
+        companyDao.save(greyMatter);
+        int greyMatterId = greyMatter.getId();
 
         //When
-        List<Company> companyName = searchFacade.companyList("Grey");
-        List<Employee> employeeName = searchFacade.employeeList("Step");
+        List<Company> companyName = searchFacade.companyList("rey");
+        List<Employee> employeeName = searchFacade.employeeList("larc");
 
         //Then
         Assert.assertEquals(1, companyName.size());
         Assert.assertEquals(1, employeeName.size());
+
+        //CleanUp
+        companyDao.deleteById(softwareMachineId);
+        companyDao.deleteById(dataMastersId);
+        companyDao.deleteById(greyMatterId);
+        companyDao.deleteById(johnSmithId);
+        companyDao.deleteById(stephanieClarksonId);
+        companyDao.deleteById(lindaKovalskyId);
     }
 }
