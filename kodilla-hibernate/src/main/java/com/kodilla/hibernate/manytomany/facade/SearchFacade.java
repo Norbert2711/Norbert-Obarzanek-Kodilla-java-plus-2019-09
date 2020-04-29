@@ -21,7 +21,7 @@ public class SearchFacade {
     private EmployeeDao employeeDao;
 
     public List<Company> companyList(String companyName) {
-        return companyDao.findCompanyByName(companyName);
+        return companyDao.retrieveCompanyByThreeLettersFromName(companyName);
     }
 
     public List<Employee> employeeList(String employeeName) {

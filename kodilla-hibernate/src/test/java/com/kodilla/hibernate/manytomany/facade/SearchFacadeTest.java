@@ -73,11 +73,15 @@ public class SearchFacadeTest {
         Assert.assertEquals(1, employeeName.size());
 
         //CleanUp
-        companyDao.deleteById(softwareMachineId);
-        companyDao.deleteById(dataMastersId);
-        companyDao.deleteById(greyMatterId);
-        companyDao.deleteById(johnSmithId);
-        companyDao.deleteById(stephanieClarksonId);
-        companyDao.deleteById(lindaKovalskyId);
+        try {
+            companyDao.deleteById(softwareMachineId);
+            companyDao.deleteById(dataMastersId);
+            companyDao.deleteById(greyMatterId);
+            companyDao.deleteById(johnSmithId);
+            companyDao.deleteById(stephanieClarksonId);
+            companyDao.deleteById(lindaKovalskyId);
+
+        } catch (Exception e) {
+        }
     }
 }

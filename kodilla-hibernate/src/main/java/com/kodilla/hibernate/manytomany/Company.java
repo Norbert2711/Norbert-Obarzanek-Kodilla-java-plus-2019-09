@@ -6,8 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedNativeQuery(                      //sql "like" - jak - porownanie, nazwa firmy
-        name = " Company.findCompanyByThreeLettersFromName",
-        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%', :NAME, '%')"
+        name = "Company.retrieveCompanyByThreeLettersFromName",
+        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%', :NAME, '%')",
+        resultClass = Company.class
 
 )
 
