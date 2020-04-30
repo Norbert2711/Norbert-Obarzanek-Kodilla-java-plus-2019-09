@@ -11,6 +11,11 @@ import java.util.List;
         resultClass = Company.class
 
 )
+@NamedNativeQuery(
+        name = "Company.lookingForCompanyByName",
+        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE CONCAT('%', :NAME, '%')",
+        resultClass = Company.class
+)
 
 @Entity
 @Table(name = "COMPANIES")
@@ -57,4 +62,5 @@ public class Company {
     private void setName(String name) {
         this.name = name;
     }
+
 }
