@@ -58,6 +58,10 @@ public class InvoiceDaoTestSuite {
         Assert.assertEquals(3, itemSize);
 
         //CleanUp
-        invoiceDao.delete(invoice1);
+        try {
+            invoiceDao.delete(invoice1);
+        } catch (Exception e) {
+
+        }
     }
 }
