@@ -9,3 +9,5 @@ include 'kodilla-jdbc'
 include 'kodilla-hibernate'
 include 'kodilla-exception'
 include 'kodilla-spring'
+include 'kodilla-testing2'
+

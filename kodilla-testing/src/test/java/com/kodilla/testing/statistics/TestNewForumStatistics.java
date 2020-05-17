@@ -2,6 +2,7 @@ package com.kodilla.testing.statistics;
 
 import com.kodilla.testing.forum.statistics.NewForumStatistisc;
 import com.kodilla.testing.forum.statistics.Statistics;
+import org.junit.*;
 
 import java.util.ArrayList;
 import java.util.List;
